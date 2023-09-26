@@ -1,0 +1,12 @@
+*{box-sizing : border-box}
+.container-box{
+    height: 300px;
+    width: 500px;
+    background-color:aliceblue;
+    margin: auto;
+    position: relative;
+    margin-top: 150px;
+    box-shadow: 0 4px 8px 0;
+    padding: 50px;
+    /* padding-right: 50px; */
+}

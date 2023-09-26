@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../css/dashboard.css" >
+    {{!-- <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script> --}}
+    {{!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chartist@0.11.4/dist/chartist.min.css"> --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <title>Dashboard</title>
+</head>
+<body>
+      <nav class="navbar navbar-light bg-light p-3">
+  <div class="d-flex col-12 col-md-3 col-lg-2 mb-2 mb-lg-0 flex-wrap flex-md-nowrap justify-content-between">
+      <a class="navbar-brand" href="#">
+          Simple Dashboard
+      </a>
+      <button class="navbar-toggler d-md-none collapsed mb-3" type="button" data-toggle="collapse" data-target="#sidebar" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+  </div>
+  <div class="col-12 col-md-4 col-lg-2">
+      <input class="form-control form-control-dark" type="text" placeholder="Search" aria-label="Search">
+  </div>
+  <div class="col-12 col-md-5 col-lg-8 d-flex align-items-center justify-content-md-end mt-3 mt-md-0">
+      <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+            Hello, Ankesh
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Messages</a></li>
+            <li><a class="dropdown-item" href="./admin">Sign out</a></li>
+          </ul>
+        </div>
+  </div>
+</nav>
+<div class="container-fluid">
+  <div class="row">
+      <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+          <!-- sidebar content goes in here -->
+          <div class="position-sticky pt-md-5">
+  <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="./dashboard">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          <span class="ml-2">Dashboard</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./dashcontent">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
+          <span class="ml-2">Content</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./dashvideo">
+          <svg xmlns="http://www.w3.org/2000/svg"  width="24" height="24" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM188.3 147.1c7.6-4.2 16.8-4.1 24.3 .5l144 88c7.1 4.4 11.5 12.1 11.5 20.5s-4.4 16.1-11.5 20.5l-144 88c-7.4 4.5-16.7 4.7-24.3 .5s-12.3-12.2-12.3-20.9V168c0-8.7 4.7-16.7 12.3-20.9z"/></svg>
+          <span class="ml-2">Video</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./userlist">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          <span class="ml-2">Users</span>
+        </a>
+      </li>
+    </ul>
+</div>
+      </nav>
+    <main class=" body col-md-9 ml-sm-auto col-lg-10 px-md-4 py-4">
+
+<h1 class="h2">Dashboard</h1>
+<p>This is the homepage of a simple admin interface </p>  
+<div class="row my-4">
+  <div class="col-12 col-md-6 col-lg-6 mb-6 mb-lg-0">
+      <div class="box1">
+        <div class="box-text">
+        Total Videos
+        <h1>{{total}}</h1>
+        </div>
+      </div>
+  </div>
+  <div class="col-6 col-md-6 mb-6 mb-lg-0 col-lg-6">
+      <div class="box2">
+        <div class="box-text">
+        Total Users
+       <h1> {{totalUsers}}</h1>
+        </div>
+      </div>
+  </div>
+  
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-5">
+  <div class="chart">
+    <div class="chart-text">
+        <h4>Total Videos</h4>
+    <p id="p" style="display: none;">{{data}}</p>
+    <canvas id="myChart" style="width:100%;max-width:450px"></canvas>
+    <script>
+    let x=  document.getElementById("p").innerHTML
+let y=x.split(",")
+{{!-- console.log(y) --}}
+var xValue = ["JavaScript", "HTML", "React Js", "Node JS", "MongoDB"];
+var yValue =[y[0],y[1],y[2],y[3],y[4]]
+var barColors = [
+  "#b91d47",
+  "red",
+  "#2b5797",
+  "yellow",
+  "#1e7145"
+];
+
+new Chart("myChart", {
+  type: "pie",
+  data: {
+    labels: xValue,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValue
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+    }
+  }
+});
+</script>
+  </div>
+  </div>
+  </div>
+<div class="col-7">
+       <div class="bar-chart">
+          <div class="chart-text">
+            <h4>Total Users</h4>
+             <p id="pe" >{{month}}</p>
+             <p id="per" >{{num}}</p>
+                  <canvas id="Chart" style="width:100%;max-width:900px;padding:7px"></canvas>
+
+<script>
+  let x1=  document.getElementById("pe").innerHTML;
+  let y1=  document.getElementById("per").innerHTML;
+  let month = x1.split(",");
+  let num = y1.split(",");
+console.log(x1)
+{{!-- console.log(y1) --}}
+var label= ['January', 'Febuary', 'March', 'April', 'May' , 'June' , 'July' , 'August' , 'September' , 'October' , 'November' , 'December'];
+var xValues = label
+var values=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  for(let i in month){
+  for(let j in label){
+    if(month[i]==label[j]){
+        values[j]=num[i]
+    }
+  }
+}
+
+var yValues = values;
+
+var barColors = ["red", "green","blue","orange","brown","pink","skyblue","yellow","orange","lightgreen","purple","#1e7145"];
+
+new Chart("Chart", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+     
+    }
+  }
+});
+</script>
+            </div>
+</div>
+</div>
+
+   </div>
+  </div>
+  </main>
+    </div>
+</div>
+
+
+  
+
+
+
+   {{!-- <a href="./addvideo"> <button type="button">Add Video</button></a>
+    <button type="button">Delete Video</button>
+    <button type="button">Edit Video</button> <br/>
+    <a href="./addcontent"><button type="button">Add Content</button></a> --}}
+{{!-- <script type="text/javascript" src="/page1.js"></script> --}}
+ 
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+</body>
+</html>

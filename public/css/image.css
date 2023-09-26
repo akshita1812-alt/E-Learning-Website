@@ -1,0 +1,23 @@
+*{box-sizing : border-box}
+.container-box{
+    height: 750px;
+    width: 500px;
+    background-color:aliceblue;
+    margin: auto;
+    position: relative;
+    margin-top: 150px;
+    box-shadow: 0 4px 8px 0;
+    padding: 50px;
+    /* padding-right: 50px; */
+}
+.cancelbtn, .signbtn{
+    font-size: 16px;
+    margin-top: 10px;
+    padding:10px 15px;
+    background-color:rgb(114, 132, 146);
+    color: white;
+    margin-left:70px;
+}
+.cancelbtn, .signbtn:hover{
+    opacity: 80;
+}

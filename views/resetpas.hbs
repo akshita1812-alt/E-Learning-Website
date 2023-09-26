@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/signIn.css">
+    <title>RESET PASSWORD</title>
+</head>
+<body>
+    <form action="/reset" method="post"  >
+    <div class="container-box">
+        <h1>Reset Password</h1>
+        <label for="pass" class="latext">
+        <b>Email</b>
+     </label><br>
+    <input type="text" placeholder="Email" name="email" value="{{id}}"><br>
+    <button type="submit" class="cancel-btn">Send Email</button>
+    <p>{{data}}</p>
+</div>
+</form>
+</body></html>

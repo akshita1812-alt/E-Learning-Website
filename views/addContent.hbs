@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="/ckeditor/ckeditor.js"></script>
+     <link href="ckeditor/plugins/codesnippet/lib/highlight/styles/default.css" rel="stylesheet">
+    <script src="ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js"></script>
+    <title>Document</title>
+  <style>
+    .container-box{
+      background-color: aliceblue;
+      padding: 15px;
+    }
+    .input{
+      margin:  10px;
+      color: rgb(54, 83, 179);
+    }
+    .addbtn{
+      margin: 10px;
+     
+    }
+  </style>
+
+</head>
+<body>
+    <form action="/addContent" method="post" enctype="multipart/form-data">
+    <div class="container-box">
+     <form action="/addNote" method="post">
+      <label class="input" for="title">Title:</label><br>
+      <input class="input" type="text" id="title" name="title"><br>
+      <label class="input" for="subtitle">Subtitle:</label><br>
+      <input class="input" type="text" id="subtitle" name="subtitle"><br>
+      <label class="input" for="content">Content:</label><br>
+    <div class="input-area">
+    <textarea name="content" id="editor" placeholder="Body"></textarea>
+  </div>
+    <button type="submit" class="addbtn">Add</button>
+    </form>
+
+<script src=""></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script>
+    
+    CKEDITOR.replace( 'editor' );
+</script> 
+</body>
+</html>
+
+

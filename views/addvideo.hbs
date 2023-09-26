@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .container-box{
+      background-color: aliceblue;
+      padding: 15px;
+    }
+    .input{
+      margin:  10px;
+      color: rgb(54, 83, 179);
+    }
+    .addbtn{
+      margin: 10px;
+     
+    }
+    h1{
+        color: rgb(54, 83, 179);
+    }
+  </style>
+</head>
+<body>
+    <form action="/addVideo" method="post">
+    <div class="container-box">
+     <h1>Add Video</h1>
+     <label for="Language" class="latext">
+    <b class="input">Language</b>
+     </label><br>
+    <input class="input" type="text" placeholder="language" name="language"><br>
+     <label for="url" class="latext" >
+        <b class="input">videoURL</b>
+     </label><br>
+    <input class="input" type="text" placeholder="URL" name="url"><br>
+<label for="title" class="latext">
+    <b class="input">Title</b>
+     </label><br>
+    <input class="input" type="text" placeholder="Title" name="title"><br>
+
+    <button type="submit" class="addbtn">Add</button>
+    </form>
+</body>
+</html>

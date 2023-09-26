@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/signIn.css">
+    <title>Log In</title>
+</head>
+<body>
+    <form action="/login" method="post"  >
+    <div class="container-box">
+     <h1>Log In</h1>
+     <label for="email" class="latext">
+        <b>Email</b>
+     </label><br>
+    <input type="text" placeholder="abc@gmail.com" name="email"><br>
+<label for="psw" class="latext">
+    <b>Password</b>
+     </label><br>
+    <input type="password" placeholder="Password" name="psw"><br>
+    <a href="/reset">Forgot Password ?</a><br>
+
+    <button type="submit" class="signbtn">Log In</button>
+    <p>Didn't Sign In ? <a href="/signUp">Sign Up Here</a></p>
+    <p>{{data}}</p>
+    </div>
+</form>
+</body>
+</html>

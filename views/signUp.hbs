@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+   <link type="text/css" rel="stylesheet" href="../css/signUp.css" >
+</head>
+<body>
+    <form action="/upload" method="post" enctype="multipart/form-data">  
+    <div class="container-box">
+        <p>Already have an Account <a href="./login">Sign In Here</a></p>
+     <h1>Sign Up</h1>
+     <label for="fname" class="latext">
+        <b>First Name</b>
+     </label><br>
+        <input type="text" placeholder="First Name" name="fname" ><br>
+        <label for="lname" class="latext">
+            <b>Last Name</b>
+         </label>  <br>
+        <input type="text" placeholder="Last Name" name="lname"><br>
+    <label for="email" class="latext">
+            <b>Email</b>
+         </label><br>
+        <input type="text" placeholder="abc@gmail.com" name="email"><br>
+    <label for="psw" class="latext">
+        <b>Password</b>
+         </label><br>
+        <input type="password" placeholder="Password" name="psw"><br>
+     <label for="cpsw" class="latext">
+        <b>Confirm Password</b>
+         </label><br>
+         <input type="password" placeholder="Confirm Password" name="cpsw"><br>
+         {{!-- <form action="/upload" method="post" enctype="multipart/form-data"> --}}
+       {{!-- <p>{{data1}}</p> --}}
+        <img src="{{data1.image}}" alt="" class="img">
+        <label for="image">Upload your image</label>
+        <input type="file" name="image" >
+        </form>
+    <label>
+
+        <input type="checkbox" checked="checked" name="remeber">Remember Me
+    </label>
+   <div class="btn">
+        <button type="button" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signbtn">Sign Up</button>
+<p>{{data}}</p>
+    </div> 
+  </div>
+  </div>
+</body>
+</html>

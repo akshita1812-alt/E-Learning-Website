@@ -1,0 +1,67 @@
+*{box-sizing : border-box}
+.container-box{
+    height: 750px;
+    width: 500px;
+    background-color:aliceblue;
+    margin: auto;
+    position: relative;
+    margin-top: 150px;
+    box-shadow: 0 4px 8px 0;
+    padding: 50px;
+    /* padding-right: 50px; */
+}
+h1{
+    text-align: center;
+    /* padding-top: 50px; */
+    font-family:Arial, Helvetica, sans-serif;
+}
+input[type = text], input[type = password]{
+    width: 100%;
+    padding: 10px;
+    margin: 5px 5px 22px 0;
+    display: inline-block;
+
+}
+.cancelbtn, .signbtn{
+    font-size: 16px;
+    margin-top: 10px;
+    padding:10px 15px;
+    background-color:rgb(114, 132, 146);
+    color: white;
+    margin-left:70px;
+}
+.cancelbtn, .signbtn:hover{
+    opacity: 80;
+}
+p{
+    
+    padding-left: 90px;
+}
+table,
+th,
+tb{
+  border: 1px solid salmon;
+  text-align: center;
+  margin-left: 45vw;
+  margin-top:10vh;
+}
+
+
+
+/* CSS code for the avatar
+.avatar {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #ccc; /* optional */
+  /* }
+  
+  .avatar img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  } */ 
+  

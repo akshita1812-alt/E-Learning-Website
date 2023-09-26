@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="/ckeditor/ckeditor.js"></script>
+     <link href="ckeditor/plugins/codesnippet/lib/highlight/styles/default.css" rel="stylesheet">
+    <script src="ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js"></script>
+    <title>Document</title>
+<body>
+     <form action="/addblog" method="post" enctype="multipart/form-data">
+    <div class="container-box">
+    <label class="input" for="content">Content:</label><br>
+    <div class="input-area">
+    <textarea name="comment" id="editor" placeholder="Body"></textarea>
+  </div>
+</div>
+ <button type="submit" class="addbtn">Add</button>
+</form>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script>
+    
+    CKEDITOR.replace( 'editor' );
+</script> 
+</body>
+
+</html>
