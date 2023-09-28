@@ -13,9 +13,9 @@ Admin panel for course and user management.
 Responsive design for mobile and desktop devices.
 
 ## Technologies Used
-Node.js: The server-side JavaScript runtime environment.
-Express.js: A web application framework for Node.js.
-MongoDB: A NoSQL database for storing user and course data.
+- Node.js: The server-side JavaScript runtime environment.
+- Express.js: A web application framework for Node.js.
+* MongoDB: A NoSQL database for storing user and course data.
 HTML/CSS: Markup and styling for web pages.
 JavaScript: Client-side scripting for dynamic web functionality.
 Bootstrap: A front-end framework for responsive web design.
