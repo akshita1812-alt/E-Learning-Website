@@ -1,6 +1,7 @@
 let express = require("express");
 let app = express();
 const path = require("path");
+const PORT = process.env.PORT || 4000;
 let bcrypt = require("bcrypt");
 const otpGenerator = require("otp-generator");
 const nodemailer  = require("nodemailer");
@@ -531,6 +532,6 @@ app.post('/userlist/delete/:id', async (req, res) => {
     await userModel.findByIdAndRemove(req.params.id);
     res.redirect('/userlist');
   });
-app.listen(4000,()=>{
-    console.log("server started");
+app.listen(PORT,()=>{
+    console.log(`server started on port ${PORT}`);
 })
