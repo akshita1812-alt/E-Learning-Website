@@ -33,7 +33,7 @@ MongoDB installed and running.
 A code editor such as Visual Studio Code
 
 ## Usage
-Visit the website at .
+Visit the website at https://e-learning-rs8h.onrender.com/.
 Sign up for an account or log in if you already have one.
 Browse available courses, enroll in courses, and access course materials.
 Manage your user profile and preferences.
