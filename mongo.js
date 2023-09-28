@@ -1,7 +1,7 @@
 let express = require("express");
 let app = express();
 const path = require("path");
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 10000;
 let bcrypt = require("bcrypt");
 const otpGenerator = require("otp-generator");
 const nodemailer  = require("nodemailer");
